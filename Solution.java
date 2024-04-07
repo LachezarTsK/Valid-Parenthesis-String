@@ -23,7 +23,10 @@ public class Solution {
 
         for (int i = startIndex; i != end; i += unitChange) {
             char current = input.charAt(i);
-            balance += (current == OPEN_PARENTHESIS) ? unitChange : (current == CLOSE_PARENTHESIS) ? -unitChange : 0;
+            balance += (current == OPEN_PARENTHESIS) ? unitChange 
+                     : (current == CLOSE_PARENTHESIS) ? -unitChange 
+                     : 0;
+            
             countAsterisk += (current == ASTERISK) ? 1 : 0;
 
             if (balance < 0 && countAsterisk == 0) {
