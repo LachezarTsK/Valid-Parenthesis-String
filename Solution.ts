@@ -20,7 +20,10 @@ function hasValidBalanceParenthesis(input: string, reverseIteration: boolean): b
 
     for (let i = startIndex; i !== end; i += unitChange) {
         let current = input.charAt(i);
-        balance += (current === this.OPEN_PARENTHESIS) ? unitChange : (current === this.CLOSE_PARENTHESIS) ? -unitChange : 0;
+        balance += (current === this.OPEN_PARENTHESIS) ? unitChange 
+                 : (current === this.CLOSE_PARENTHESIS) ? -unitChange 
+                 : 0;
+                 
         countAsterisk += (current === this.ASTERISK) ? 1 : 0;
 
         if (balance < 0 && countAsterisk === 0) {
